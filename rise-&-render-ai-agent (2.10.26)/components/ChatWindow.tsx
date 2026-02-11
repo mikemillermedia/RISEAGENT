@@ -32,7 +32,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose, isOpen }) => {
     if (!chatSessionRef.current) {
         const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
         chatSessionRef.current = ai.chats.create({
-            model: 'gemini-1.5-flash',
+            model: 'gemini-2.0-flash-exp',
             config: {
                 systemInstruction: SYSTEM_INSTRUCTION,
                 tools: TOOLS
@@ -267,7 +267,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose, isOpen }) => {
             <p className="mt-8 text-studio-text font-light tracking-wide">
                 {isTalking ? "Speaking..." : "Listening..."}
             </p>
-            <p className="text-xs text-gray-500 mt-2">gemini-1.5-flash</p>
+            <p className="text-xs text-gray-500 mt-2">gemini-2.0-flash-exp</p>
         </div>
 
       </div>
