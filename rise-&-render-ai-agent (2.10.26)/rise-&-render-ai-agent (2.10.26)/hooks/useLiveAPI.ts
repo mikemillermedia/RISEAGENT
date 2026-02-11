@@ -49,7 +49,7 @@ export const useLiveAPI = ({ apiKey, onDisconnect }: UseLiveAPIProps) => {
 
       // Initialize Gemini Session
       const sessionPromise = ai.live.connect({
-        model: 'gemini-1.5-flash',
+        model: 'gemini-2.0-flash-exp',
         config: {
             responseModalities: [Modality.AUDIO],
             systemInstruction: SYSTEM_INSTRUCTION,
