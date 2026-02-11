@@ -267,7 +267,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose, isOpen }) => {
             <p className="mt-8 text-studio-text font-light tracking-wide">
                 {isTalking ? "Speaking..." : "Listening..."}
             </p>
-            <p className="text-xs text-gray-500 mt-2">gemini-1.5-flash</p>
+            <p className="text-xs text-gray-500 mt-2">gemini-2.0-flash-exp</p>
         </div>
 
       </div>
