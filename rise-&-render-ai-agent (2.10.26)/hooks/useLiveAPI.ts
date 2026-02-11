@@ -47,12 +47,14 @@ export const useLiveAPI = ({ apiKey, onDisconnect }: UseLiveAPIProps) => {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       streamRef.current = stream;
 
-      // Initialize Gemini Session
-      const sessionPromise = ai.live.connect({
-        model: 'gemini-2.5-flash-native-audio-preview-12-2025',
-        config: {
-            responseModalities: [Modality.AUDIO],
-            systemInstruction: SYSTEM_INSTRUCTION,
+     // Initialize Gemini Session
+const sessionPromise = ai.live.connect({
+  model: 'gemini-2.0-flash-exp',
+  config: {
+    responseModalities: [Modality.AUDIO],
+    systemInstruction: SYSTEM_INSTRUCTION,
+  },
+});
             speechConfig: {
                 voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Aoede' } }
             },
